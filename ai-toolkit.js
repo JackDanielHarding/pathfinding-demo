@@ -393,7 +393,7 @@ class AStar{
     
         var nextNode = this.open.shift()
     
-        console.log("next Node: " + nextNode)
+        console.log(`next Node: ${nextNode}`)
     
         fill(color(255, 0, 255))
         rect(nextNode.x * this.grid.cell_size, nextNode.y * this.grid.cell_size, this.grid.cell_size, this.grid.cell_size);
@@ -432,7 +432,7 @@ class AStar{
                     console.log("failed goalbound criteria")
                     continue
                 } else {
-                    console.log("new Node: " + potentialNode)
+                    console.log(`new Node: ${potentialNode}`)
                     this.open.push(potentialNode)
                 }
             }
