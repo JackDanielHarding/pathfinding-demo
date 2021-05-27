@@ -1,5 +1,5 @@
 const CANVAS_SIZE = 1000;
-const FRAME_RATE = 5;
+const FRAME_RATE = 10;
 
 const GRID_SIZE = 20;
 

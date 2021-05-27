@@ -250,6 +250,10 @@ class Goalbounder{
             for(var x = 0; x < grid.size; x++){
                 this.current_start = {x:x, y:y}
 
+                if(this.grid.isWall(this.current_start)){
+                    continue
+                }
+
                 this.init()
 
                 while(this.north_nodes_open.length != 0 || this.east_nodes_open.length != 0 || this.south_nodes_open.length != 0 || this.west_nodes_open.length != 0){
@@ -452,6 +456,7 @@ class AStar{
                 rect(pathNode.prevNode.x * grid.cell_size, pathNode.prevNode.y * grid.cell_size, grid.cell_size, grid.cell_size);
                 pathNode = pathNode.prevNode
             }
+            noLoop()
         }
     }
 }
